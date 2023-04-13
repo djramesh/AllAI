@@ -1,0 +1,253 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'poppins', sans-serif;
+}
+
+body{
+	height: 100vh;
+	width: 100%;
+}
+
+.container{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
+}
+
+.container:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url("images/contactme\ bg.jpg") no-repeat center;
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -1;
+}
+.contact-box{
+	max-width: 850px;
+  height: 60vh;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+.left{
+	background: url("images/contactme\ bg.jpg") no-repeat center;
+	background-size: cover;
+	height: 100%;
+}
+
+.right{
+	padding: 25px 40px;
+}
+
+.right p{
+  padding: 8px;
+}
+
+h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+/* .field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+} */
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+  .logo{
+    width: 10%;
+  }
+}
+
+
+#preloader{
+  background: white url('images/loading.gif') no-repeat center center;
+  background-size: 25%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 10%;
+  margin: auto;
+  /* padding: 0px 0px; */
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.448);
+  z-index: 9;
+}
+
+.navbar ul li::after {
+  content: '';
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(125deg, rgba(242, 63, 251, 1) 47%, rgba(252, 249, 70, 1) 100%);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
+}
+
+.navbar ul li a:hover{
+  opacity: 0.7;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
+
+.logo {
+  width: 60%;
+}
+
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 60px;
+  /* margin-right: 10px; */
+  position: relative;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: #ffffff;
+  line-height: 80px;
+  margin-left: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+
+.category-chatbot {
+  position: relative;
+  width: 30%;
+  height: 5px;
+  left: 4%;
+  z-index: -1;
+}
+
+.category-chatbot h1 {
+  position: relative;
+  color: white;
+  letter-spacing: 5px;
+  z-index: -1;
+}
+
+.category-writing{
+  position: relative;
+  width: 30%;
+  height: 5px;
+  left: 4%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.category-writing h1 {
+  position: relative;
+  color: white;
+  letter-spacing: 5px;
+  z-index: -1;
+}
+
+
+@media (max-width: 952px) {
+  .logo {
+      width: 50%;
+      padding-top: 8px;
+  }
+
+  .navbar ul li a {
+      font-size: 16px;
+  }
+  #preloader{
+    background: white url('images/loading.gif') no-repeat center center;
+    background-size: 60%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+      display: block;
+  }
+
+  .navbar ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.764);
+      top: 80px;
+      left: -130%;
+      text-align: center;
+      transition: all .5s;
+  }
+  .navbar ul li{
+      display: block;
+      padding: 10px;
+      margin: 50px 0;
+      line-height: 30px;
+      color: white;
+      z-index: 2;
+
+  }
+  .navbar ul li a{
+      font-size: 20px;
+
+  }
+  
+  #check:checked ~ ul{
+      left: 0;
+      
+  }
+  
+}
